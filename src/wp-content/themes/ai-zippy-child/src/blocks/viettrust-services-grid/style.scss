@@ -1,0 +1,239 @@
+@use "../../../../ai-zippy/src/scss/variables" as *;
+
+.v-services {
+	padding: 80px 0;
+	background-color: #f8fafc;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+
+	&__container {
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 0;
+
+		@include from(md) {
+			padding: 0 40px;
+		}
+
+		@include from(xl) {
+			max-width: 1320px;
+			padding: 0;
+		}
+	}
+
+	&__header {
+		text-align: center;
+		margin-bottom: 50px;
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 24px;
+		color: #ffffff; // Usually contrast against the section background image
+
+		// Fallback when there is no section background image (section is white/light)
+		.v-services:not([style*="background-image"]) & {
+			color: #102b5c;
+		}
+	}
+
+	&__title {
+		font-family: $font-heading;
+		font-size: clamp(28px, 4vw, 38px);
+		font-weight: 800;
+		margin: 0 0 16px 0;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		color: inherit;
+	}
+
+	&__subtitle {
+		font-size: clamp(14px, 2.2vw, 16px);
+		line-height: 1.6;
+		margin: 0;
+		color: rgba(255, 255, 255, 0.9);
+
+		.v-services:not([style*="background-image"]) & {
+			color: #64748b;
+		}
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 0; // Solid adjacent layout
+
+		@include from(md) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	&__card {
+		position: relative;
+		overflow: hidden;
+		height: 540px;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+
+		@include until(md) {
+			height: 480px;
+			border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+		}
+
+		// Hover states
+		&:hover {
+			transform: scale(1.01);
+			z-index: 2;
+			box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+
+			.v-services__card-overlay {
+				top: 0;
+				padding-top: 80px;
+			}
+
+			.v-services__card-arrow {
+				left: calc(100% - 50px);
+				top: 30px;
+				transform: translate(0, 0);
+
+				svg {
+					transform: rotate(360deg) scale(1.1);
+				}
+			}
+
+			.v-services__card-hover-content {
+				max-height: 300px;
+				opacity: 1;
+				margin-top: 24px;
+			}
+		}
+
+		// Inner Overlay Wrapper
+		&-overlay {
+			position: absolute;
+			top: 62%;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			padding: 40px 30px 30px 30px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			transition: top 0.4s cubic-bezier(0.25, 1, 0.5, 1), padding-top 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+			color: #ffffff;
+		}
+
+		// Floating Arrow Icon
+		&-arrow {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 3;
+			cursor: pointer;
+			transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1), top 0.4s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+
+			svg {
+				transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+				display: block;
+				width: 38px;
+				height: 38px;
+
+				circle {
+					fill: #ffffff;
+				}
+			}
+		}
+
+		&-title {
+			font-family: $font-heading;
+			font-size: clamp(20px, 2.5vw, 24px);
+			font-weight: 700;
+			color: #ffffff;
+			margin: 0 0 12px 0;
+			line-height: 1.3;
+		}
+
+		&-desc {
+			font-size: 14px;
+			line-height: 1.6;
+			color: rgba(255, 255, 255, 0.9);
+			margin: 0;
+		}
+
+		// Expandable Hover Content
+		&-hover-content {
+			max-height: 0;
+			opacity: 0;
+			overflow: hidden;
+			transition: max-height 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease, margin-top 0.4s ease;
+		}
+	}
+
+	// Sub services list inside cards
+	&__sub-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px 15px;
+		margin-bottom: 30px;
+		border-top: 1px solid rgba(255, 255, 255, 0.25);
+		padding-top: 20px;
+	}
+
+	&__sub-item {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__sub-icon {
+		width: 24px;
+		height: 24px;
+		object-fit: contain;
+		filter: brightness(0) invert(1); // Force white icons
+	}
+
+	&__sub-title {
+		font-size: 13px;
+		font-weight: 600;
+		line-height: 1.4;
+		color: #ffffff;
+	}
+
+	// Explore Link button
+	&__explore-link {
+		display: inline-flex;
+		align-items: center;
+		color: #ffffff;
+		text-decoration: none;
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		border-bottom: 2px solid #ffffff;
+		padding-bottom: 4px;
+		transition: all 0.3s ease;
+		align-self: flex-start;
+
+		&:hover {
+			letter-spacing: 1.5px;
+			opacity: 0.8;
+		}
+	}
+}
+
+// Editor-specific helpers to make selection and typing easier
+.v-services__card.is-editing {
+	outline: 3px solid #007cba;
+	outline-offset: -3px;
+}
+.v-services__card-desc-preview, .v-services__sub-services-preview {
+	font-size: 12px;
+	opacity: 0.8;
+}

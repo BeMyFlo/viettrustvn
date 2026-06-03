@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy-child/viettrust-hero-slider",
+	"version": "1.0.0",
+	"title": "[Viettrust] Hero Slider",
+	"category": "ai-zippy",
+	"icon": "images-alt2",
+	"description": "A high-performance modern hero slider with smooth transitions and customizable overlay.",
+	"keywords": ["hero", "slider", "banner", "slide", "viettrust"],
+	"supports": {
+		"html": false,
+		"align": ["full"]
+	},
+	"attributes": {
+		"slides": {
+			"type": "array",
+			"default": [
+				{
+					"title": "ĐỐI TÁC TIN CẬY - GIẢI PHÁP HIỆU QUẢ",
+					"description": "Viettrust VN cung cấp dịch vụ quản lý tiện ích tích hợp hàng đầu, cam kết đồng hành cùng sự phát triển bền vững của doanh nghiệp bạn.",
+					"imageUrl": "",
+					"imageId": 0,
+					"btnText": "Tìm hiểu ngay",
+					"btnUrl": "#",
+					"overlayOpacity": 40
+				}
+			]
+		},
+		"autoplay": {
+			"type": "boolean",
+			"default": true
+		},
+		"autoplaySpeed": {
+			"type": "number",
+			"default": 5000
+		}
+	},
+	"textdomain": "ai-zippy-child",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

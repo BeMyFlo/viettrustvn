@@ -1,0 +1,26 @@
+.v-solutions-grid {
+	// Editor helper styles
+	&__card {
+		cursor: pointer;
+		position: relative;
+
+		&.is-editing {
+			box-shadow: 0 0 0 3px #007cba;
+			border-radius: 8px;
+		}
+
+		&:hover {
+			transform: none !important; // Prevent jumping when editing
+		}
+	}
+
+	&__image-wrap {
+		min-height: 150px;
+	}
+
+	&__placeholder {
+		color: #475569;
+		font-size: 13px;
+		font-weight: 500;
+	}
+}

@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy-child/viettrust-service-intro",
+	"version": "1.0.0",
+	"title": "[Viettrust] Service Intro",
+	"category": "viettrustvn",
+	"icon": "align-left",
+	"description": "Introduction section for service detail pages, displaying intro text and a contact button.",
+	"keywords": ["intro", "service", "cta", "viettrust", "aden"],
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Quản lý vận hành chuyên nghiệp nhằm nâng cao giá trị sống của cư dân cũng như giá trị tài sản."
+		},
+		"description": {
+			"type": "string",
+			"default": "Chúng tôi chú trọng vào các hoạt động vận hành và quản lý chung cư – nhà ở hiệu quả, giúp nâng cao giá trị căn hộ trong thời gian dài."
+		},
+		"btnText": {
+			"type": "string",
+			"default": "Liên hệ với chúng tôi"
+		},
+		"btnUrl": {
+			"type": "string",
+			"default": "/contact/"
+		}
+	},
+	"textdomain": "ai-zippy-child",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

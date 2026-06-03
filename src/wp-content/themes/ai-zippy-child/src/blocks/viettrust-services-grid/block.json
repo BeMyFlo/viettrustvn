@@ -1,0 +1,85 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy-child/viettrust-services-grid",
+	"version": "1.0.0",
+	"title": "[Viettrust] Services Grid",
+	"category": "viettrustvn",
+	"icon": "grid-view",
+	"description": "Grid of premium service cards featuring full-height background images, custom hover overlay expansions, and sub-services.",
+	"keywords": ["services", "grid", "viettrust", "card", "facilities", "aden"],
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Dịch vụ của chúng tôi"
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "Với các dịch vụ và tiện ích được thiết kế phù hợp, đáp ứng thỏa đáng nhu cầu của khách hàng trên mọi lĩnh vực, chúng tôi cung cấp các giải pháp Quản lý Tiện ích Tích hợp (IFM) và giải pháp Năng lượng xanh, đảm bảo tài sản con người cho doanh nghiệp nhằm nâng cao chất lượng cuộc sống và hiệu quả tại nơi làm việc."
+		},
+		"sectionBgUrl": {
+			"type": "string",
+			"default": "https://www.adenservices.com/content/media/2021/02/homepage_our_services_background_background_photo_-our_services-2000x922-1.jpg"
+		},
+		"sectionBgId": {
+			"type": "number",
+			"default": 0
+		},
+		"services": {
+			"type": "array",
+			"default": [
+				{
+					"title": "Dịch vụ Quản lý Tài sản",
+					"description": "Chúng tôi giúp cơ sở hạ tầng của các bạn vận hành một cách tốt nhất bằng việc tối đa hóa giá trị tài sản và tối ưu hóa hiệu năng vận hành.",
+					"bgImageUrl": "https://www.adenservices.com/content/media/2023/04/IND-1-Industry-1-e1681352098917-1920x1219.jpg",
+					"bgImageId": 0,
+					"overlayColor": "rgba(0,167,109,0.82)",
+					"linkUrl": "/dich-vu-quan-ly-tai-san/",
+					"subServices": [
+						{ "title": "Quản lý Chung cư", "iconUrl": "https://www.adenservices.com/content/media/2023/04/Chung-cu-white.png", "iconId": 0 },
+						{ "title": "Quản lý Văn phòng", "iconUrl": "https://www.adenservices.com/content/media/2023/04/Van-phong-white.png", "iconId": 0 },
+						{ "title": "Bảo trì & Kỹ thuật", "iconUrl": "https://www.adenservices.com/content/media/2023/04/Bao-tri-white.png", "iconId": 0 },
+						{ "title": "Vệ sinh & Dịch vụ hỗ trợ", "iconUrl": "https://www.adenservices.com/content/media/2023/04/Ve-sinh-PM-white.png", "iconId": 0 }
+					]
+				},
+				{
+					"title": "Dịch vụ Quản lý Cơ sở công nghiệp",
+					"description": "Với đội ngũ chuyên gia cao cấp, chúng tôi cung cấp giải pháp Quản lý Tiện ích Tích hợp (IFM) nhằm tối ưu hóa công tác quản lý và quy trình vận hành tại các cơ sở công nghiệp.",
+					"bgImageUrl": "https://www.adenservices.com/content/media/2023/04/victor-2PJMDIgK9EA-unsplash-scaled-e1681783946996-1920x1855.jpg",
+					"bgImageId": 0,
+					"overlayColor": "rgba(238,66,46,0.82)",
+					"linkUrl": "/quan-ly-co-so-cong-nghiep/",
+					"subServices": [
+						{ "title": "Quản lý Tiện ích Tích hợp (IFM)", "iconUrl": "https://www.adenservices.com/content/media/2021/02/icons-web_securityrisk_managementsystems.png", "iconId": 0 },
+						{ "title": "Vệ sinh & Dịch vụ hỗ trợ", "iconUrl": "https://www.adenservices.com/content/media/2021/02/icons-web_cleaninggrounds_services.png", "iconId": 0 },
+						{ "title": "Bảo trì & Kỹ thuật", "iconUrl": "https://www.adenservices.com/content/media/2021/02/icons-web_maintenance_technical_solutions_1.png", "iconId": 0 },
+						{ "title": "Dịch vụ Ăn uống", "iconUrl": "https://www.adenservices.com/content/media/2021/02/2._food_service.svg", "iconId": 0 }
+					]
+				},
+				{
+					"title": "Dịch vụ Trường học",
+					"description": "Chúng tôi cung cấp các dịch vụ vận hành chuyên nghiệp giúp học sinh, giáo viên và cán bộ nhà trường có môi trường lý tưởng để học tập và làm việc.",
+					"bgImageUrl": "https://www.adenservices.com/content/media/2023/04/nazrin-babashova-zzOmEj3rQAE-unsplash-1440x1920.jpg",
+					"bgImageId": 0,
+					"overlayColor": "rgba(251,182,53,0.82)",
+					"linkUrl": "/dich-vu-tien-ich-truong-hoc/",
+					"subServices": [
+						{ "title": "Dịch vụ Ăn uống", "iconUrl": "https://www.adenservices.com/content/media/2023/04/An-uong-white.png", "iconId": 0 },
+						{ "title": "Vệ sinh & Dịch vụ hỗ trợ", "iconUrl": "https://www.adenservices.com/content/media/2023/04/Ve-sinh-SCH-white.png", "iconId": 0 },
+						{ "title": "Bảo trì & Kỹ thuật", "iconUrl": "https://www.adenservices.com/content/media/2023/04/Bao-tri-SCH-white.png", "iconId": 0 },
+						{ "title": "Quản lý Tiện ích Tích Hợp (IFM)", "iconUrl": "https://www.adenservices.com/content/media/2023/04/Tien-ich-white.png", "iconId": 0 }
+					]
+				}
+			]
+		}
+	},
+	"textdomain": "ai-zippy-child",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

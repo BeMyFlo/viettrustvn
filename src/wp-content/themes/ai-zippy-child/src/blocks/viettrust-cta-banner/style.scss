@@ -1,0 +1,149 @@
+@use "../../../../ai-zippy/src/scss/variables" as *;
+
+.v-cta-banner {
+	padding: 80px 0;
+	background-color: #ffffff;
+
+	&__container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 24px;
+	}
+
+	&__box {
+		background: #ffffff;
+		border: 1px solid rgba(226, 232, 240, 0.8);
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: 0 10px 30px rgba(16, 43, 92, 0.04);
+	}
+
+	&__row {
+		display: flex;
+		flex-direction: column;
+
+		@include from(lg) {
+			flex-direction: row;
+		}
+	}
+
+	&__col-img {
+		flex: 0 0 100%;
+		width: 100%;
+
+		@include from(lg) {
+			flex: 0 0 41.666667%; // 5 columns in 12-col grid (5:7 ratio)
+			width: 41.666667%;
+		}
+	}
+
+	&__col-content {
+		flex: 0 0 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+
+		@include from(lg) {
+			flex: 0 0 58.333333%; // 7 columns in 12-col grid (5:7 ratio)
+			width: 58.333333%;
+		}
+	}
+
+	&__image-wrap, &__image-container {
+		width: 100%;
+		height: 100%;
+		min-height: 250px;
+		overflow: hidden;
+
+		@include from(lg) {
+			height: 100%;
+			min-height: 380px;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+
+	&__item, &__content-item {
+		padding: 40px 30px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		@include from(md) {
+			padding: 50px;
+		}
+
+		@include from(lg) {
+			padding: 60px 80px;
+		}
+	}
+
+	&__item-title {
+		font-family: $font-heading;
+		font-size: clamp(20px, 3vw, 26px);
+		font-weight: 800;
+		color: #102b5c; // Viettrust Navy
+		margin: 0 0 20px 0;
+		line-height: 1.3;
+		text-align: left;
+	}
+
+	&__item-desc {
+		font-size: clamp(14px, 2.2vw, 16px);
+		line-height: 1.7;
+		color: #64748b; // Slate Muted
+		margin: 0 0 20px 0;
+		text-align: left;
+	}
+
+	&__item-highlight {
+		font-size: clamp(14px, 2.2vw, 16px);
+		line-height: 1.7;
+		color: #102b5c;
+		font-weight: 700;
+		text-decoration: underline;
+		margin: 0 0 35px 0;
+		text-align: left;
+	}
+
+	&__button-wrap {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	&__button {
+		display: inline-flex;
+		align-items: center;
+		color: #d0202e; // Viettrust Red
+		background-color: transparent;
+		border: 2px solid #d0202e;
+		border-radius: 30px;
+		padding: 12px 28px;
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		text-decoration: none;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		cursor: pointer;
+
+		&:hover {
+			background-color: #d0202e;
+			color: #ffffff;
+			
+			.v-cta-banner__button-arrow {
+				transform: translateX(4px);
+			}
+		}
+
+		&-arrow {
+			margin-left: 8px;
+			transition: transform 0.3s ease;
+		}
+	}
+}

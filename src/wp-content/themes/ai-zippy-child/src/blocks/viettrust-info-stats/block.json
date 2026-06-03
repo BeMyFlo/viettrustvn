@@ -1,0 +1,55 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy-child/viettrust-info-stats",
+	"version": "1.0.0",
+	"title": "[Viettrust] Info Stats",
+	"category": "ai-zippy",
+	"icon": "performance",
+	"description": "Clean modern section showing numbers and statistics with icons.",
+	"keywords": ["stats", "figures", "numbers", "viettrust", "performance"],
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"stats": {
+			"type": "array",
+			"default": [
+				{
+					"number": "10+",
+					"labelVi": "Năm Kinh Nghiệm",
+					"labelEn": "YEARS OF EXPERIENCE",
+					"iconUrl": "",
+					"iconId": 0
+				},
+				{
+					"number": "500+",
+					"labelVi": "Nhân Sự Chuyên Nghiệp",
+					"labelEn": "PROFESSIONAL STAFF",
+					"iconUrl": "",
+					"iconId": 0
+				},
+				{
+					"number": "1,000+",
+					"labelVi": "Khách Hàng Tin Cậy",
+					"labelEn": "TRUSTED CLIENTS",
+					"iconUrl": "",
+					"iconId": 0
+				},
+				{
+					"number": "99%",
+					"labelVi": "Mức Độ Hài Lòng",
+					"labelEn": "SATISFACTION RATE",
+					"iconUrl": "",
+					"iconId": 0
+				}
+			]
+		}
+	},
+	"textdomain": "ai-zippy-child",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

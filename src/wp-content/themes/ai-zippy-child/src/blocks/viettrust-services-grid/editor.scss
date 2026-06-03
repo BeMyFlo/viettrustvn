@@ -1,0 +1,17 @@
+.v-services {
+	&__card {
+		cursor: pointer;
+		user-select: none;
+
+		&.is-editing {
+			border-color: #d0202e !important;
+			box-shadow: 0 0 0 2px rgba(208, 32, 46, 0.4) !important;
+			background-color: rgba(16, 43, 92, 0.02) !important;
+		}
+
+		// Disable pointer events on RichText containers
+		.rich-text {
+			pointer-events: auto;
+		}
+	}
+}

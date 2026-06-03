@@ -1,0 +1,24 @@
+// =============================================================================
+// Child theme styles — client-specific overrides.
+//
+// Parent tokens (colors, breakpoints, mixins) are available via:
+//   @use "@parent-scss/variables" as *;
+//
+// Example:
+//   @use "@parent-scss/variables" as *;
+//   .client-hero { color: $c-accent; @include from(md) { ... } }
+// =============================================================================
+
+@use "@parent-scss/variables" as *;
+
+// Add client-specific styles below.
+// body { /* custom styles */ }
+
+// Remove default margin block gap between top-level layout sections
+.wp-site-blocks > *,
+.is-root-container > * {
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+}
+
+

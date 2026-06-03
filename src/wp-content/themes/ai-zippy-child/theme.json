@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"palette": [
+				{
+					"slug": "primary",
+					"color": "#102b5c",
+					"name": "Viettrust Navy"
+				},
+				{
+					"slug": "secondary",
+					"color": "#f8fafc",
+					"name": "Viettrust Light Gray"
+				},
+				{
+					"slug": "accent",
+					"color": "#d0202e",
+					"name": "Viettrust Red"
+				},
+				{
+					"slug": "white",
+					"color": "#ffffff",
+					"name": "White"
+				},
+				{
+					"slug": "black",
+					"color": "#091221",
+					"name": "Black"
+				},
+				{
+					"slug": "muted",
+					"color": "#64748b",
+					"name": "Slate Muted"
+				}
+			]
+		}
+	},
+	"styles": {}
+}

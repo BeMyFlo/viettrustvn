@@ -1,0 +1,50 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy-child/viettrust-cta-banner",
+	"version": "1.0.0",
+	"title": "[Viettrust] CTA Banner",
+	"category": "viettrustvn",
+	"icon": "align-pull-left",
+	"description": "Call to action banner splitting image and text column with premium border and shadow styles.",
+	"keywords": ["cta", "banner", "contact", "viettrust", "aden"],
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Aden luôn sẵn sàng hỗ trợ doanh nghiệp."
+		},
+		"description": {
+			"type": "string",
+			"default": "Chúng tôi cung cấp các giải pháp phù hợp với nhu cầu của khách hàng, nhằm tối ưu hóa cơ sở hoạt động và cải thiện chất lượng cuộc sống."
+		},
+		"highlightText": {
+			"type": "string",
+			"default": "Giải đáp mọi thắc mắc và kết nối với nhu cầu của bạn."
+		},
+		"btnText": {
+			"type": "string",
+			"default": "Liên hệ với chúng tôi"
+		},
+		"btnUrl": {
+			"type": "string",
+			"default": "/contact/"
+		},
+		"imageUrl": {
+			"type": "string",
+			"default": "https://www.adenservices.com/content/media/2023/04/shutterstock_530724958-e1681726394956.jpg"
+		},
+		"imageId": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "ai-zippy-child",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

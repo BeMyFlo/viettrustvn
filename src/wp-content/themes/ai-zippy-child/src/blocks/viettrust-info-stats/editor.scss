@@ -1,0 +1,11 @@
+.v-stats {
+	&__col {
+		cursor: pointer;
+
+		&.is-editing {
+			box-shadow: 0 0 0 1px #d0202e;
+			background-color: rgba(208, 32, 46, 0.02);
+			border-radius: 8px;
+		}
+	}
+}

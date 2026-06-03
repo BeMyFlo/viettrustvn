@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy-child/viettrust-solutions-grid",
+	"version": "1.0.0",
+	"title": "[Viettrust] Solutions Grid",
+	"category": "viettrustvn",
+	"icon": "grid-view",
+	"description": "Grid section showing custom solution cards with images, titles, and descriptions.",
+	"keywords": ["solutions", "grid", "cards", "viettrust", "aden"],
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Giải pháp của chúng tôi"
+		},
+		"solutions": {
+			"type": "array",
+			"default": [
+				{
+					"title": "Quản lý vận hành & bảo dưỡng",
+					"description": "Dịch vụ Vận hành và Bảo dưỡng của chúng tôi giúp mang lại môi trường sống an toàn cho cư dân, đồng thời khai thác, duy trì và nâng cao hiệu quả giá trị nhà ở.",
+					"imageUrl": "https://www.adenservices.com/content/media/2023/03/PM-3-Residential-1920x1280.jpg",
+					"imageId": 0
+				},
+				{
+					"title": "Xây dựng & kết nối cộng đồng",
+					"description": "Nhằm làm phong phú đời sống văn hóa tinh thần và xây dựng môi trường sống lành mạnh, chúng tôi thường xuyên hợp tác với các cơ quan, đoàn thể để triển khai các hoạt động văn hóa.",
+					"imageUrl": "https://www.adenservices.com/content/media/2023/03/PM4-Rensidential-1920x1280.jpg",
+					"imageId": 0
+				},
+				{
+					"title": "Quản trị rủi ro",
+					"description": "Các công tác phòng ngừa, kiểm tra, kiểm soát rủi ro luôn được duy trì liên tục theo ca trực, nhằm đem lại hiệu quả cao trong việc bảo vệ tài sản và ứng phó sự cố.",
+					"imageUrl": "https://www.adenservices.com/content/media/2023/03/PM-5-Residential.jpg",
+					"imageId": 0
+				}
+			]
+		}
+	},
+	"textdomain": "ai-zippy-child",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

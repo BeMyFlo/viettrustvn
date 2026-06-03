@@ -1,0 +1,34 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy-child/viettrust-service-banner",
+	"version": "1.0.0",
+	"title": "[Viettrust] Service Banner",
+	"category": "viettrustvn",
+	"icon": "cover-image",
+	"description": "Header banner for sub-service detail pages, featuring a page title, slogan, and background image.",
+	"keywords": ["banner", "hero", "header", "viettrust", "aden"],
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"slogan": {
+			"type": "string",
+			"default": "CẢI THIỆN MÔI TRƯỜNG SỐNG VÀ TỐI ĐA HÓA GIÁ TRỊ TÀI SẢN"
+		},
+		"bgImageUrl": {
+			"type": "string",
+			"default": "https://www.adenservices.com/content/media/2023/04/mike-enerio-8oIVXAXF5Ok-unsplash-e1681115112930-1920x792.jpg"
+		},
+		"bgImageId": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "ai-zippy-child",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy-child/viettrust-latest-news",
+	"version": "1.0.0",
+	"title": "[Viettrust] Latest News",
+	"category": "viettrustvn",
+	"icon": "welcome-widgets-menus",
+	"description": "Dynamic block displaying 5 latest news posts in a premium 3-column layout.",
+	"keywords": ["news", "posts", "latest", "viettrust", "aden"],
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"blockTitle": {
+			"type": "string",
+			"default": "TIN TỨC MỚI NHẤT"
+		},
+		"blockIntro": {
+			"type": "string",
+			"default": "Xem những tin tức gần đây của ADEN"
+		},
+		"moreLinkText": {
+			"type": "string",
+			"default": "Xem tất cả bản tin"
+		},
+		"moreLinkUrl": {
+			"type": "string",
+			"default": "/news/"
+		}
+	},
+	"textdomain": "ai-zippy-child",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

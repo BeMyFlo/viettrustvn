@@ -1,0 +1,172 @@
+@use "../../../../ai-zippy/src/scss/variables" as *;
+
+.v-imgtext {
+	padding: 80px 0;
+	background-color: #ffffff;
+	position: relative;
+	overflow: hidden;
+
+	// Theme modifier: glass style
+	&--modern-glass {
+		background-color: #f8fafc;
+
+		.v-imgtext__content {
+			background: rgba(255, 255, 255, 0.7);
+			backdrop-filter: blur(10px);
+			border: 1px solid rgba(226, 232, 240, 0.8);
+			padding: 40px;
+			border-radius: 20px;
+			box-shadow: 0 10px 30px rgba(16, 43, 92, 0.03);
+		}
+	}
+
+	&__container {
+		max-width: $content-width;
+		margin: 0 auto;
+		padding: 0 24px;
+	}
+
+	&__row {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		align-items: center;
+
+		@include from(md) {
+			flex-direction: row;
+			gap: 60px;
+		}
+	}
+
+	// Layout reverse modifiers
+	&--right {
+		.v-imgtext__row {
+			@include from(md) {
+				flex-direction: row-reverse;
+			}
+		}
+
+		.v-imgtext__img-wrap {
+			@include from(md) {
+				border-radius: 100px 24px 100px 24px; // Mirror leaf shape
+			}
+		}
+	}
+
+	// Media Column
+	&__media-col {
+		width: 100%;
+		flex: 1;
+	}
+
+	&__img-wrap {
+		width: 100%;
+		border-radius: 24px 100px 24px 100px; // Modern asymmetric leaf shape
+		overflow: hidden;
+		box-shadow: 0 20px 40px rgba(16, 43, 92, 0.1);
+		transition: all 0.4s ease;
+		aspect-ratio: 4 / 3;
+
+		&:hover {
+			transform: scale(1.02);
+			box-shadow: 0 30px 50px rgba(16, 43, 92, 0.15);
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+
+	&__placeholder {
+		width: 100%;
+		aspect-ratio: 4 / 3;
+		border: 2px dashed #cbd5e1;
+		border-radius: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #64748b;
+		cursor: pointer;
+		background-color: #f8fafc;
+		transition: all 0.3s ease;
+
+		&:hover {
+			border-color: #102b5c;
+			color: #102b5c;
+		}
+	}
+
+	// Content Column
+	&__content-col {
+		width: 100%;
+		flex: 1;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+	}
+
+	&__tagline {
+		font-family: $font-primary;
+		font-size: 13px;
+		font-weight: 800;
+		color: #d0202e; // Viettrust Red
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		margin-bottom: 12px;
+		display: inline-block;
+	}
+
+	&__title {
+		font-family: $font-heading;
+		font-size: clamp(26px, 3.5vw, 36px);
+		font-weight: 800;
+		color: #102b5c; // Viettrust Navy
+		line-height: 1.25;
+		margin: 0 0 20px 0;
+	}
+
+	&__desc {
+		font-size: 15px;
+		line-height: 1.7;
+		color: #475569; // Slate
+		margin: 0 0 35px 0;
+	}
+
+	&__btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		background-color: #102b5c; // Viettrust Navy
+		color: #ffffff;
+		padding: 12px 28px;
+		font-size: 14px;
+		font-weight: 700;
+		border-radius: 50px;
+		text-decoration: none;
+		letter-spacing: 0.5px;
+		transition: all 0.3s ease;
+		cursor: pointer;
+		box-shadow: 0 4px 15px rgba(16, 43, 92, 0.2);
+
+		&-arrow {
+			transition: transform 0.3s ease;
+		}
+
+		&:hover {
+			background-color: #d0202e; // Accent Red
+			box-shadow: 0 4px 18px rgba(208, 32, 46, 0.3);
+			transform: translateY(-1px);
+
+			.v-imgtext__btn-arrow {
+				transform: translate(2px, -2px);
+			}
+		}
+	}
+}

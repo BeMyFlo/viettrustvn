@@ -1,0 +1,60 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy-child/viettrust-image-text",
+	"version": "1.0.0",
+	"title": "[Viettrust] Image Text",
+	"category": "ai-zippy",
+	"icon": "align-pull-left",
+	"description": "Flexible section with text on one side and image on the other, supporting left/right position and premium shapes.",
+	"keywords": ["image-text", "about", "viettrust", "feature", "media"],
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"tagline": {
+			"type": "string",
+			"default": "VỀ VIETTRUST VN"
+		},
+		"title": {
+			"type": "string",
+			"default": "Giải Pháp Quản Lý Tiện Ích Tích Hợp Thông Minh"
+		},
+		"description": {
+			"type": "string",
+			"default": "Viettrust VN là đơn vị tiên phong trong việc cung cấp các dịch vụ Quản lý Tiện ích Tích hợp (IFM). Chúng tôi cam kết mang lại các giải pháp vận hành tối ưu, tiết kiệm chi phí và nâng cao giá trị tài sản bền vững cho doanh nghiệp bạn thông qua đội ngũ kỹ sư chuyên môn cao và công nghệ hiện đại."
+		},
+		"btnText": {
+			"type": "string",
+			"default": "TÌM HIỂU THÊM"
+		},
+		"btnUrl": {
+			"type": "string",
+			"default": "#"
+		},
+		"imageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"imageId": {
+			"type": "number",
+			"default": 0
+		},
+		"imagePosition": {
+			"type": "string",
+			"default": "left",
+			"enum": ["left", "right"]
+		},
+		"styleType": {
+			"type": "string",
+			"default": "classic",
+			"enum": ["classic", "modern-glass"]
+		}
+	},
+	"textdomain": "ai-zippy-child",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
