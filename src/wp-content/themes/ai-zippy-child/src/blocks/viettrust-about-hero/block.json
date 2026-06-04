@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy-child/viettrust-about-hero",
+	"version": "1.0.0",
+	"title": "[Viettrust] About Hero Banner",
+	"category": "viettrustvn",
+	"icon": "cover-image",
+	"description": "About page header banner featuring a background image, big title, subtitle, and dynamic breadcrumbs.",
+	"keywords": ["about", "banner", "hero", "viettrust", "header"],
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "VỀ CHÚNG TÔI"
+		},
+		"subtitle": {
+			"type": "string",
+			"default": "ĐỐI TÁC TIN CẬY - GIẢI PHÁP HIỆU QUẢ"
+		},
+		"bgImageUrl": {
+			"type": "string",
+			"default": "https://www.adenservices.com/content/media/2021/02/homepage_our_services_background_background_photo_-our_services-2000x922-1.jpg"
+		},
+		"bgImageId": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "ai-zippy-child",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

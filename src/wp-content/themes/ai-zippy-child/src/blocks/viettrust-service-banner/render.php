@@ -30,14 +30,14 @@ $breadcrumbs[] = '<span class="active">' . esc_html($post_title) . '</span>';
 <div <?php echo $wrapper_attributes; ?><?php echo $style_attr; ?>>
     <div class="v-service-banner__overlay">
         <div class="v-service-banner__container">
-            <div class="v-service-banner__breadcrumbs">
+            <div class="v-service-banner__breadcrumbs v-animate fade-in-up">
                 <?php echo implode(' <span class="sep">/</span> ', $breadcrumbs); ?>
             </div>
             
-            <h1 class="v-service-banner__title"><?php echo esc_html($post_title); ?></h1>
+            <h1 class="v-service-banner__title v-animate fade-in-up delay-100"><?php echo esc_html($post_title); ?></h1>
             
             <?php if ($slogan) : ?>
-                <div class="v-service-banner__slogan-wrap">
+                <div class="v-service-banner__slogan-wrap v-animate fade-in-up delay-200">
                     <h2 class="v-service-banner__slogan"><?php echo wp_kses_post($slogan); ?></h2>
                 </div>
             <?php endif; ?>

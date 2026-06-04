@@ -18,19 +18,20 @@ $wrapper_attributes = get_block_wrapper_attributes([
 <div <?php echo $wrapper_attributes; ?>>
     <div class="v-solutions-grid__container">
         <?php if ($title) : ?>
-            <div class="v-solutions-grid__header">
+            <div class="v-solutions-grid__header v-animate fade-in-up">
                 <h2 class="v-solutions-grid__title"><?php echo wp_kses_post($title); ?></h2>
             </div>
         <?php endif; ?>
 
         <?php if (!empty($solutions)) : ?>
             <div class="v-solutions-grid__items">
-                <?php foreach ($solutions as $item) : 
+                <?php foreach ($solutions as $index => $item) : 
                     $sol_title = $item['title'] ?? '';
                     $sol_desc  = $item['description'] ?? '';
                     $sol_img   = $item['imageUrl'] ?? '';
+                    $delay_class = 'delay-' . min(($index + 1) * 100, 1000);
                     ?>
-                    <div class="v-solutions-grid__card">
+                    <div class="v-solutions-grid__card v-animate fade-in-up <?php echo $delay_class; ?>">
                         <div class="v-solutions-grid__image-wrap">
                             <?php if ($sol_img) : ?>
                                 <img src="<?php echo esc_url($sol_img); ?>" alt="<?php echo esc_attr($sol_title); ?>" class="v-solutions-grid__image" loading="lazy" />

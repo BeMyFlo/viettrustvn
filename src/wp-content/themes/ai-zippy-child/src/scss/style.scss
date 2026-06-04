@@ -21,4 +21,42 @@
   margin-block-end: 0 !important;
 }
 
+// Scroll Animation Framework
+.v-animate {
+	opacity: 0;
+	transition-duration: 0.9s;
+	transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+	transition-fill-mode: both;
+
+	// Animations definition
+	&.fade-in-up {
+		transform: translateY(30px);
+	}
+
+	&.fade-in-left {
+		transform: translateX(-35px);
+	}
+
+	&.fade-in-right {
+		transform: translateX(35px);
+	}
+
+	&.zoom-in {
+		transform: scale(0.95);
+	}
+
+	// Trigger visible state
+	&.is-visible {
+		opacity: 1;
+		transform: translate(0) scale(1);
+	}
+}
+
+// Staggered delays for child animations
+@for $i from 1 through 10 {
+	.delay-#{$i * 100} {
+		transition-delay: #{$i * 100}ms !important;
+	}
+}
+
 

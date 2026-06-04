@@ -1,0 +1,17 @@
+.v-contact-info {
+	// Editor adjustments
+	.v-contact-map-iframe-preview {
+		iframe {
+			pointer-events: none; // Disable interaction inside the editor
+		}
+	}
+}
+.v-contact-card__logo-placeholder {
+	background-color: #f1f5f9;
+	color: #64748b;
+	padding: 10px;
+	font-size: 11px;
+	border-radius: 4px;
+	margin-bottom: 5px;
+	font-weight: bold;
+}

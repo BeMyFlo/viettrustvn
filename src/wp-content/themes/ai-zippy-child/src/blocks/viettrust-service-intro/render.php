@@ -17,7 +17,7 @@ $wrapper_attributes = get_block_wrapper_attributes([
         <div class="v-service-intro__row">
             
             <!-- Left Column: Content -->
-            <div class="v-service-intro__col-text">
+            <div class="v-service-intro__col-text v-animate fade-in-left">
                 <?php if ($title) : ?>
                     <h3 class="v-service-intro__title"><?php echo wp_kses_post($title); ?></h3>
                 <?php endif; ?>
@@ -28,7 +28,7 @@ $wrapper_attributes = get_block_wrapper_attributes([
             </div>
 
             <!-- Right Column: CTA Button -->
-            <div class="v-service-intro__col-btn">
+            <div class="v-service-intro__col-btn v-animate fade-in-right delay-200">
                 <?php if ($btn_text && $btn_url) : ?>
                     <a href="<?php echo esc_url($btn_url); ?>" class="v-service-intro__btn">
                         <span><?php echo esc_html($btn_text); ?></span>

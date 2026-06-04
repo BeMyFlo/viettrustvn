@@ -1,0 +1,296 @@
+@use "../../../../ai-zippy/src/scss/variables" as *;
+
+.v-contact-info {
+	padding: 80px 0;
+	background-color: #f8fafc;
+
+	&__container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 24px;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 50px;
+		align-items: start;
+
+		@include from(lg) {
+			grid-template-columns: 1.1fr 0.9fr; // Card on left, map on right
+		}
+	}
+
+	&__col-card {
+		display: flex;
+		justify-content: center;
+
+		@include from(lg) {
+			justify-content: flex-start;
+		}
+	}
+
+	&__col-map {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+	}
+}
+
+// Digital Business Card Styling
+.v-contact-card {
+	position: relative;
+	width: 100%;
+	max-width: 580px;
+	aspect-ratio: 1.65;
+	background-color: #ffffff;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 15px 40px rgba(16, 43, 92, 0.08);
+	border: 1px solid #e2e8f0;
+	display: flex;
+	z-index: 1;
+
+	@include until(sm) {
+		aspect-ratio: auto;
+		flex-direction: column;
+		min-height: 400px;
+	}
+
+	&__left {
+		position: relative;
+		width: 72%;
+		height: 100%;
+		background-color: #1a365d; // Deep Viettrust Navy
+		color: #ffffff;
+		padding: 30px 40px 30px 30px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		clip-path: polygon(0 0, 100% 0, 78% 100%, 0 100%);
+		z-index: 2;
+
+		@include until(sm) {
+			width: 100%;
+			clip-path: none;
+			padding: 30px 24px;
+		}
+
+		// Accent line running parallel to the diagonal cut
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: -15px;
+			bottom: 0;
+			width: 30px;
+			background-color: rgba(255, 255, 255, 0.08);
+			transform: skewX(-12.5deg);
+			z-index: -1;
+
+			@include until(sm) {
+				display: none;
+			}
+		}
+	}
+
+	&__right {
+		width: 28%;
+		height: 100%;
+		background-color: #ffffff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 20px 20px 20px 0;
+
+		@include until(sm) {
+			width: 100%;
+			padding: 24px;
+			border-top: 1px solid #e2e8f0;
+		}
+	}
+
+	&__name {
+		font-family: $font-heading;
+		font-size: clamp(18px, 2.5vw, 22px);
+		font-weight: 700;
+		color: #ffffff;
+		margin: 0 0 5px 0;
+		letter-spacing: 0.5px;
+		text-transform: uppercase;
+	}
+
+	&__title {
+		font-size: clamp(11px, 1.8vw, 13px);
+		font-weight: 600;
+		color: rgba(255, 255, 255, 0.7);
+		margin: 0;
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+	}
+
+	&__details {
+		margin: 20px 0;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		color: #ffffff;
+		text-decoration: none;
+		font-size: clamp(11px, 1.8vw, 13px);
+		transition: opacity 0.3s ease;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #d0202e; // Viettrust Red
+		flex-shrink: 0;
+	}
+
+	&__val {
+		font-weight: 500;
+		letter-spacing: 0.2px;
+	}
+
+	&__qr {
+		width: 70px;
+		height: 70px;
+		background-color: #ffffff;
+		border-radius: 6px;
+		padding: 4px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+		@include from(md) {
+			width: 80px;
+			height: 80px;
+		}
+
+		&-img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+		&-placeholder {
+			font-size: 8px;
+			color: #64748b;
+			text-align: center;
+		}
+	}
+
+	&__brand {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		width: 100%;
+		padding-left: 20px;
+
+		@include until(sm) {
+			padding-left: 0;
+		}
+	}
+
+	&__logo {
+		max-width: 110px;
+		height: auto;
+		margin-bottom: 10px;
+
+		@include from(md) {
+			max-width: 130px;
+		}
+	}
+
+	&__brand-text {
+		font-family: $font-heading;
+		font-size: 16px;
+		font-weight: 700;
+		color: #102b5c;
+		margin-bottom: 5px;
+	}
+
+	&__slogan {
+		font-size: 8px;
+		font-weight: 700;
+		color: #102b5c;
+		margin: 0;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		line-height: 1.3;
+	}
+}
+
+// Office Address & Map styling
+.v-contact-address {
+	&__heading {
+		font-family: $font-heading;
+		font-size: 16px;
+		font-weight: 800;
+		color: #102b5c; // Viettrust Navy
+		margin: 0 0 10px 0;
+		letter-spacing: 1px;
+		position: relative;
+		padding-left: 15px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 4px;
+			height: 16px;
+			background-color: #d0202e; // Red accent
+			border-radius: 2px;
+		}
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 1.6;
+		color: #64748b;
+		margin: 0;
+	}
+}
+
+.v-contact-map-wrap {
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 10px 30px rgba(16, 43, 92, 0.04);
+	border: 1px solid #e2e8f0;
+	background-color: #ffffff;
+}
+
+.v-contact-map-iframe {
+	line-height: 0;
+
+	iframe {
+		display: block;
+		width: 100%;
+		height: 320px;
+	}
+}
+
+.v-contact-map-placeholder {
+	height: 320px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f1f5f9;
+	color: #64748b;
+	font-size: 13px;
+}

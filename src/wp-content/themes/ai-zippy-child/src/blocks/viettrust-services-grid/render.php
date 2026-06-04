@@ -24,7 +24,7 @@ $wrapper_attributes = get_block_wrapper_attributes([
 <div <?php echo $wrapper_attributes; ?><?php echo $wrapper_style; ?>>
     <div class="v-services__container">
         <?php if ($title || $subtitle) : ?>
-            <div class="v-services__header">
+            <div class="v-services__header v-animate fade-in-up">
                 <?php if ($title) : ?>
                     <h2 class="v-services__title"><?php echo wp_kses_post($title); ?></h2>
                 <?php endif; ?>
@@ -50,8 +50,9 @@ $wrapper_attributes = get_block_wrapper_attributes([
                 }
                 
                 $overlay_style = ' style="background-color: ' . esc_attr($s_overlay) . ';"';
+                $delay_class = 'delay-' . min(($index + 1) * 100, 1000);
                 ?>
-                <div class="v-services__card"<?php echo $card_style; ?>>
+                <div class="v-services__card v-animate fade-in-up <?php echo $delay_class; ?>"<?php echo $card_style; ?>>
                     <div class="v-services__card-overlay"<?php echo $overlay_style; ?>>
                         <div class="v-services__card-arrow">
                             <svg width="32" height="32" viewBox="0 0 32 32">

@@ -1,0 +1,120 @@
+@use "../../../../ai-zippy/src/scss/variables" as *;
+
+.v-about-values {
+	padding: 80px 0;
+	background-color: #ffffff;
+
+	&__container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 24px;
+	}
+
+	&__header {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	&__title {
+		font-family: $font-heading;
+		font-size: clamp(24px, 3.5vw, 32px);
+		font-weight: 800;
+		color: #102b5c; // Viettrust Navy
+		text-transform: uppercase;
+		margin: 0;
+		letter-spacing: 0.5px;
+		position: relative;
+		display: inline-block;
+		padding-bottom: 15px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 60px;
+			height: 3px;
+			background-color: #d0202e; // Viettrust Red
+			border-radius: 2px;
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 30px;
+
+		@include from(md) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	&__card {
+		background-color: #f8fafc;
+		border-radius: 8px;
+		padding: 40px 30px;
+		text-align: center;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+		transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+		border: 1px solid #f1f5f9;
+
+		&:hover {
+			transform: translateY(-5px);
+			background-color: #ffffff;
+			box-shadow: 0 15px 35px rgba(16, 43, 92, 0.08);
+			border-color: rgba(208, 32, 46, 0.2); // Light red border glow
+
+			.v-about-values__icon-wrap {
+				background-color: #d0202e; // Icon background switches to Red on hover
+				transform: rotateY(180deg);
+			}
+		}
+	}
+
+	&__icon-wrap {
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		background-color: #102b5c; // Viettrust Navy background
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 25px;
+		transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+	}
+
+	&__icon {
+		width: 40px;
+		height: 40px;
+		object-fit: contain;
+		filter: brightness(0) invert(1); // Force white color for PNG icons
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__card-title {
+		font-family: $font-heading;
+		font-size: 20px;
+		font-weight: 700;
+		color: #102b5c; // Viettrust Navy
+		margin: 0 0 15px 0;
+		line-height: 1.4;
+	}
+
+	&__card-desc {
+		font-size: 14px;
+		line-height: 1.6;
+		color: #64748b; // Slate Muted
+		margin: 0;
+		text-align: justify;
+	}
+}

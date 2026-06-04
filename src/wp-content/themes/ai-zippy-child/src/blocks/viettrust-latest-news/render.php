@@ -25,7 +25,7 @@ $wrapper_attributes = get_block_wrapper_attributes([
 <div <?php echo $wrapper_attributes; ?>>
     <div class="v-latest-news-block__container">
         <?php if ($block_title || $block_intro) : ?>
-            <div class="v-latest-news-block__header">
+            <div class="v-latest-news-block__header v-animate fade-in-up">
                 <?php if ($block_title) : ?>
                     <h2 class="v-latest-news-block__title"><?php echo esc_html($block_title); ?></h2>
                 <?php endif; ?>
@@ -40,7 +40,7 @@ $wrapper_attributes = get_block_wrapper_attributes([
             <div class="v-latest-news-block__grid">
                 
                 <!-- Column 1: Featured Post with Image -->
-                <div class="v-latest-news-block__col">
+                <div class="v-latest-news-block__col v-animate fade-in-left">
                     <?php 
                     if (isset($recent_posts[0])) : 
                         $post1 = $recent_posts[0];
@@ -68,7 +68,7 @@ $wrapper_attributes = get_block_wrapper_attributes([
                 </div>
 
                 <!-- Column 2: Text only posts (Posts 2 & 3) -->
-                <div class="v-latest-news-block__col">
+                <div class="v-latest-news-block__col v-animate fade-in-up delay-200">
                     <?php 
                     for ($i = 1; $i <= 2; $i++) :
                         if (isset($recent_posts[$i])) :
@@ -91,7 +91,7 @@ $wrapper_attributes = get_block_wrapper_attributes([
                 </div>
 
                 <!-- Column 3: Text only posts (Posts 4 & 5) -->
-                <div class="v-latest-news-block__col">
+                <div class="v-latest-news-block__col v-animate fade-in-right delay-400">
                     <?php 
                     for ($i = 3; $i <= 4; $i++) :
                         if (isset($recent_posts[$i])) :
@@ -119,7 +119,7 @@ $wrapper_attributes = get_block_wrapper_attributes([
         <?php endif; ?>
 
         <?php if ($more_text && $more_url) : ?>
-            <div class="v-latest-news-block__more text-center">
+            <div class="v-latest-news-block__more text-center v-animate fade-in-up delay-200">
                 <a class="v-latest-news-block__more-link" href="<?php echo esc_url($more_url); ?>"><?php echo esc_html($more_text); ?></a>
             </div>
         <?php endif; ?>

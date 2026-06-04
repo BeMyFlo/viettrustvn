@@ -20,7 +20,7 @@ $wrapper_attributes = get_block_wrapper_attributes([
             <div class="v-cta-banner__row">
                 
                 <!-- Left Column: Image -->
-                <div class="v-cta-banner__col-img">
+                <div class="v-cta-banner__col-img v-animate fade-in-left">
                     <?php if ($image_url) : ?>
                         <div class="v-cta-banner__image-wrap">
                             <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($title); ?>" class="v-cta-banner__image" loading="lazy" />
@@ -29,7 +29,7 @@ $wrapper_attributes = get_block_wrapper_attributes([
                 </div>
 
                 <!-- Right Column: Text & CTA Button -->
-                <div class="v-cta-banner__col-content">
+                <div class="v-cta-banner__col-content v-animate fade-in-right delay-200">
                     <div class="v-cta-banner__item">
                         <?php if ($title) : ?>
                             <h4 class="v-cta-banner__item-title"><?php echo wp_kses_post($title); ?></h4>

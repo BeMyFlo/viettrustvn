@@ -19,8 +19,9 @@ $wrapper_attributes = get_block_wrapper_attributes(['class' => 'v-stats']);
                 $label_vi = $item['labelVi'] ?? '';
                 $label_en = $item['labelEn'] ?? '';
                 $icon_url = $item['iconUrl'] ?? '';
+                $delay_class = 'delay-' . min(($index + 1) * 100, 1000);
                 ?>
-                <div class="v-stats__col">
+                <div class="v-stats__col v-animate fade-in-up <?php echo $delay_class; ?>">
                     <div class="v-stats__icon-wrap">
                         <?php if ($icon_url) : ?>
                             <img class="v-stats__icon" src="<?php echo esc_url($icon_url); ?>" alt="<?php echo esc_attr($label_vi); ?>" loading="lazy" />

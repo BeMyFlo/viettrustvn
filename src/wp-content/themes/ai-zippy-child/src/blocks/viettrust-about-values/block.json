@@ -1,0 +1,49 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy-child/viettrust-about-values",
+	"version": "1.0.0",
+	"title": "[Viettrust] About Values",
+	"category": "viettrustvn",
+	"icon": "shield",
+	"description": "Mission, Vision, and Core Values section for About page displayed in a premium 3-column grid.",
+	"keywords": ["values", "mission", "vision", "about", "viettrust"],
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Sứ mệnh - Tầm nhìn - Giá trị cốt lõi"
+		},
+		"items": {
+			"type": "array",
+			"default": [
+				{
+					"title": "Sứ mệnh",
+					"description": "Cung cấp các giải pháp quản lý tài sản toàn diện và chuyên nghiệp, mang lại môi trường sống và làm việc an toàn, tiện nghi, tối ưu hóa giá trị tài sản cho khách hàng.",
+					"imageUrl": "https://www.adenservices.com/content/media/2023/04/Ve-sinh-PM-white.png",
+					"imageId": 0
+				},
+				{
+					"title": "Tầm nhìn",
+					"description": "Trở thành đối tác tin cậy hàng đầu tại Việt Nam trong lĩnh vực Quản lý Tiện ích Tích hợp (IFM), định hình tiêu chuẩn mới về vận hành thông minh và bền vững.",
+					"imageUrl": "https://www.adenservices.com/content/media/2023/04/Van-phong-white.png",
+					"imageId": 0
+				},
+				{
+					"title": "Giá trị cốt lõi",
+					"description": "Tận tâm – Chuyên nghiệp – Minh bạch – Đổi mới. Chúng tôi đặt khách hàng làm trung tâm, hành động với tinh thần trách nhiệm cao nhất.",
+					"imageUrl": "https://www.adenservices.com/content/media/2023/04/Bao-tri-white.png",
+					"imageId": 0
+				}
+			]
+		}
+	},
+	"textdomain": "ai-zippy-child",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

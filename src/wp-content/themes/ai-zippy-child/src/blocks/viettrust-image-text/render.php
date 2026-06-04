@@ -18,6 +18,9 @@ $classes = array(
 );
 
 $wrapper_attributes = get_block_wrapper_attributes(['class' => implode(' ', $classes)]);
+
+$media_col_class = 'v-imgtext__media-col v-animate ' . ($image_position === 'right' ? 'fade-in-right' : 'fade-in-left');
+$content_col_class = 'v-imgtext__content-col v-animate ' . ($image_position === 'right' ? 'fade-in-left' : 'fade-in-right') . ' delay-200';
 ?>
 
 <div <?php echo $wrapper_attributes; ?>>
@@ -25,7 +28,7 @@ $wrapper_attributes = get_block_wrapper_attributes(['class' => implode(' ', $cla
         <div class="v-imgtext__row">
             
             <!-- Media Column -->
-            <div class="v-imgtext__media-col">
+            <div class="<?php echo esc_attr($media_col_class); ?>">
                 <?php if ($image_url) : ?>
                     <div class="v-imgtext__img-wrap">
                         <img class="v-imgtext__img" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($title); ?>" loading="lazy" />
@@ -34,7 +37,7 @@ $wrapper_attributes = get_block_wrapper_attributes(['class' => implode(' ', $cla
             </div>
             
             <!-- Content Column -->
-            <div class="v-imgtext__content-col">
+            <div class="<?php echo esc_attr($content_col_class); ?>">
                 <div class="v-imgtext__content">
                     <?php if ($tagline) : ?>
                         <span class="v-imgtext__tagline"><?php echo wp_kses_post($tagline); ?></span>

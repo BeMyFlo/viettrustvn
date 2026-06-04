@@ -1,0 +1,54 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy-child/viettrust-contact-info",
+	"version": "1.0.0",
+	"title": "[Viettrust] Contact Info & Card",
+	"category": "viettrustvn",
+	"icon": "businesscard",
+	"description": "Contact info block displaying a digital business card (Director info, Zalo QR) on the left, and address/Google Map on the right.",
+	"keywords": ["contact", "card", "info", "map", "viettrust"],
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"directorName": {
+			"type": "string",
+			"default": "NGUYỄN PHẠM TUẤN THANH"
+		},
+		"directorTitle": {
+			"type": "string",
+			"default": "DIRECTOR"
+		},
+		"phone": {
+			"type": "string",
+			"default": "0902 440 209"
+		},
+		"email": {
+			"type": "string",
+			"default": "thanh.nguyen@viettrustvn.com"
+		},
+		"website": {
+			"type": "string",
+			"default": "viettrustvn.com"
+		},
+		"qrCodeUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"officeAddress": {
+			"type": "string",
+			"default": "Tầng 5, Tòa nhà Hà Đô Airport Building, số 2 Hồng Hà, Phường 2, Quận Tân Bình, TP. Hồ Chí Minh"
+		},
+		"mapIframe": {
+			"type": "string",
+			"default": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0633857508375!2d106.6669931758385!3d10.806461958639209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919290000000001%3A0xabcdef123456!2zSMOgIMSQw7QgQWlycG9ydCBCdWlsZGluZw!5e0!3m2!1svi!2s!4v1780000000000!5m2!1svi!2s\" width=\"100%\" height=\"320\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+		}
+	},
+	"textdomain": "ai-zippy-child",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

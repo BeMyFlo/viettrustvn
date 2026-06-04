@@ -1,0 +1,14 @@
+.v-about-values {
+	&__card {
+		cursor: pointer;
+
+		&.is-editing {
+			box-shadow: 0 0 0 3px #007cba;
+			border-radius: 8px;
+		}
+
+		&:hover {
+			transform: none !important; // Prevent jumpy edits
+		}
+	}
+}
